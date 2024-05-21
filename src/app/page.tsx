@@ -1,5 +1,9 @@
 import { db } from "~/server/db";
 
+// by default next will build the page just once and then serve it to the user
+// this makes it so whe there's a change to the db it knows to rebuild the page
+export const dynamic = "force-dynamic";
+
 const mockUrls = [
   "https://utfs.io/f/5170dc2e-aaa4-4435-81c3-c0069ab5edbe-1zbfv.png",
   "https://utfs.io/f/abc34344-ee5f-4229-abfa-4ed7ffb62241-4yuf94.15.50-transformed.png",
