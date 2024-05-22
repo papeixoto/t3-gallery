@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
+import Link from "next/link";
 import { getMyImages } from "~/server/queries";
 
 // by default next will build the page just once and then serve it to the user
@@ -13,7 +14,9 @@ async function Images() {
     <div className="flex flex-wrap justify-center gap-4">
       {images.map((image) => (
         <div key={image.id} className="flex h-48 w-48 flex-col">
-          <Image src={image.url} alt={image.name} width={192} height={192} />
+          <Link href={`/img/${image.id}`}>
+            <Image src={image.url} alt={image.name} width={192} height={192} />
+          </Link>
           <div>{image.name}</div>
         </div>
       ))}
