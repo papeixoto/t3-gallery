@@ -8,9 +8,9 @@
 - [x] Actually set up a database (supabase / postgres next)
 - [x] Attach database to UI
 - [x] Add authentication (clerk)
-- [ ] Add image upload
-- [ ] "taint" (server-only)
-- [ ] use next Image component
+- [x] Add image upload
+- [x] "taint" (server-only)
+- [x] Use next Image component
 - [ ] Error management (sentry)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (with server actions)
